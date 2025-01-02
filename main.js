@@ -6,7 +6,8 @@ app.on("ready", () => {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
+        nodeIntegration: true, // You can keep this if needed
+        contextIsolation: false, // This can also remain
     },
   });
 
