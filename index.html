@@ -27,7 +27,7 @@
 
       <!-- IMAP Port -->
       <label for="imapPort">IMAP Port:</label>
-      <input type="number" id="imapPort" name="imapPort" placeholder="993" required>
+      <input type="number" id="imapPort" name="imapPort" placeholder="143" value="143" required>
 
       <!-- SMTP Server -->
       <label for="smtpServer">SMTP Server:</label>
@@ -35,7 +35,12 @@
 
       <!-- SMTP Port -->
       <label for="smtpPort">SMTP Port:</label>
-      <input type="number" id="smtpPort" name="smtpPort" placeholder="587" required>
+      <input type="number" id="smtpPort" name="smtpPort" placeholder="587" value="587" required>
+
+      <!-- SSL Checkbox -->
+      <label>
+        <input type="checkbox" id="ssl" name="ssl"> Enable SSL
+      </label>
 
       <!-- Submit Button -->
       <button type="submit">Login</button>

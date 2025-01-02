@@ -13,16 +13,22 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
   const imapPort = document.getElementById('imapPort').value;
   const smtpServer = document.getElementById('smtpServer').value;
   const smtpPort = document.getElementById('smtpPort').value;
+  const ssl = document.getElementById('ssl').checked;
 
-  console.log({ email, password, imapServer, imapPort, smtpServer, smtpPort });
+  console.log({ email, password, imapServer, imapPort, smtpServer, smtpPort, ssl });
 
-  // Add your logic to pass this data to main.js or backend processes
-  window.electronAPI.login({
-    email,
-    password,
-    imapServer,
-    imapPort,
-    smtpServer,
-    smtpPort,
-  });
+  // Ensure window.electronAPI is defined
+  if (window.electronAPI) {
+    window.electronAPI.login({
+      email,
+      password,
+      imapServer,
+      imapPort,
+      smtpServer,
+      smtpPort,
+      ssl,
+    });
+  } else {
+    console.error("window.electronAPI is not defined. Ensure preload script is correctly set up.");
+  }
 });
