@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bread-Mail Login</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styling.css">
 </head>
 <body>
   <div class="login-container">
     <h1>Welcome to Bread-Mail 🍞</h1>
-    <form id="login-form">
-      <input type="email" id="email" placeholder="Email" required />
-      <input type="password" id="password" placeholder="Password" required />
+    <form id="loginForm">
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+      <!-- Password with toggle -->
+      <label for="password">Password:</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <button type="button" id="togglePassword">👁️</button>
+      </div>
+
+      <!-- IMAP Server -->
+      <label for="imapServer">IMAP Server:</label>
+      <input type="text" id="imapServer" name="imapServer" placeholder="imap.example.com" required>
+
+      <!-- IMAP Port -->
+      <label for="imapPort">IMAP Port:</label>
+      <input type="number" id="imapPort" name="imapPort" placeholder="993" required>
+
+      <!-- SMTP Server -->
+      <label for="smtpServer">SMTP Server:</label>
+      <input type="text" id="smtpServer" name="smtpServer" placeholder="smtp.example.com" required>
+
+      <!-- SMTP Port -->
+      <label for="smtpPort">SMTP Port:</label>
+      <input type="number" id="smtpPort" name="smtpPort" placeholder="587" required>
+
+      <!-- Submit Button -->
       <button type="submit">Login</button>
     </form>
-    <p id="status"></p>
   </div>
+
   <script src="login.js"></script>
 </body>
 </html>

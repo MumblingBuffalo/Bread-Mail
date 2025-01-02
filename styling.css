@@ -1,29 +1,27 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+/* Add padding and margins for new fields */
+label {
+  display: block;
+  margin: 8px 0 4px;
 }
 
-.login-container {
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.password-wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
 }
 
-.breadboard {
-  display: flex;
-  height: 100vh;
-}
-
-.sidebar {
-  width: 200px;
-  background-color: #f4f4f4;
-  padding: 10px;
-}
-
-.content {
+.password-wrapper input {
   flex: 1;
-  padding: 10px;
+}
+
+.password-wrapper button {
+  margin-left: 8px;
+  padding: 8px;
+  cursor: pointer;
 }
